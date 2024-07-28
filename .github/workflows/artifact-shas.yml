@@ -1,10 +1,10 @@
 name: Artifact SHAs
 
 on:
+  release:
+    types: [edited, created]
   # We trigger the workflow everytime any release is edited.
   # Meaning every new item that is uploaded to a release will trigger this check.
-  release:
-    types: [edited]
 
 env:
   release: github.release
