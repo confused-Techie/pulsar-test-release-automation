@@ -1,6 +1,7 @@
 const github = require("@actions/github");
 const context = github.context;
 
+console.log(process.env);
 console.log(context);
 
 function hasEnoughArtifacts() {
