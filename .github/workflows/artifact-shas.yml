@@ -7,7 +7,7 @@ on:
   # Meaning every new item that is uploaded to a release will trigger this check.
 
 env:
-  release: github.release
+  release: ${{ github.release }}
 
 jobs:
   run-script:
