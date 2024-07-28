@@ -1,0 +1,29 @@
+name: Artifact SHAs
+
+on:
+  # We trigger the workflow everytime any release is edited.
+  # Meaning every new item that is uploaded to a release will trigger this check.
+  release:
+    types: [edited]
+
+env:
+  release: github.release
+
+jobs:
+  run-script:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout the repo
+        uses: actions/checkout@v4
+
+      - name: Setup NodeJS
+        uses: actions/setup-node@v4
+        with:
+          node-version: 19.x
+
+      #- name: Install Dependencies
+      #  run: npm install
+
+      - name: Run Script
+        run: npm run generate-sha

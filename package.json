@@ -1,0 +1,11 @@
+{
+  "name": "pulsar-test-release-automation",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "generate-sha": "node ./generate-sha/index.js"
+  },
+  "keywords": [],
+  "author": "confused-Techie",
+  "license": "MIT"
+}
