@@ -1,3 +1,7 @@
+const github = require("@actions/github");
+const context = github.context;
+
+console.log(context);
 
 function hasEnoughArtifacts() {
   return (process.env.release.artifacts.length === 8);
@@ -6,7 +10,7 @@ function hasEnoughArtifacts() {
 (async () => {
 
   console.log(process.env.release);
-  
+
   if (hasEnoughArtifacts()) {
 
   } else {
